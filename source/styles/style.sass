@@ -1,0 +1,63 @@
+@import "normalize"
+@import "sections/fonts"
+@import "mixins"
+@import "variables"
+
+html
+  box-sizing: border-box
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+.page
+  margin: 0
+  padding: 0
+  font-family: "Open Sans", "Arial", sans-serif
+  font-size: 15px
+  font-weight: 400
+  font-style: normal
+  line-height: 30px
+  color: #000000
+
+.container
+  width: 1200px
+  margin: 0 auto
+  padding: 0 20px
+
+img
+  max-width: 100%
+  height: auto
+
+p, ul, li, blockquote, cite, form, fieldset, input, h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+
+
+a
+  text-decoration: none
+
+.visually-hidden:not(:focus):not(:active)
+  position: absolute
+
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+
+  white-space: nowrap
+
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+
+
+@import "sections/*.sass"
+
+
