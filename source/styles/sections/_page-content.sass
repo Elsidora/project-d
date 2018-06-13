@@ -1,0 +1,110 @@
+.page-content
+  &__title
+    padding: 0 60px
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 47px
+    line-height: 48px
+    font-weight: 700
+    color: #000000
+
+  &__wrapper-title
+    background-image: linear-gradient(to right, #dbdbdb 33%, #ebebeb 33%)
+    padding: 23px 0
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    padding: 0
+    outline: 2px solid green
+
+  &__form-title
+    padding: 0 60px
+    width: 320px
+
+  &__block-title
+    display: block
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 16px
+    line-height: 24px
+    font-weight: 700
+    color: #000000
+
+
+  &__sort-title
+    display: flex
+    justify-content: space-between
+    width: 760px
+    outline: 2px solid orange
+
+  &__list
+    @include flex
+
+    &--photos
+      flex-wrap: wrap
+      width: 760px
+
+  &__triangles
+    @include flex
+
+  &__title-item
+    font-size: 0
+    outline: 2px solid black
+
+  &__title-link
+    display: block
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 14px
+    line-height: 18px
+    font-weight: 400
+    color: rgba(0, 0, 0, 0.3)
+    padding: 3px 0
+
+    &--active
+      color: rgba(0, 0, 0, 1)
+
+  &__wrapper-blocks
+    background-image: linear-gradient(to right, #ebebeb 33%, #ffffff 33%)
+
+  &__content
+    padding: 70px 0
+
+  &__item
+    outline: 2px solid red
+    margin-bottom: 50px
+
+.breadcrumbs
+  @include flex
+  padding: 0 60px
+
+
+.photo
+  &__inner
+    @include flex
+    width: 360px
+
+  &__title
+    width: 260px
+    padding: 0
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 18px
+    line-height: 24px
+    font-weight: 700
+    color: #000000
+
+  &__cost
+    width: 80px
+    padding: 0
+    text-align: right
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 16px
+    line-height: 24px
+    font-weight: 300
+    color: #000000
+
+
+
+.paginator
+  @include flex
+
+  &__list
+    @include flex

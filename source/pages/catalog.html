@@ -74,11 +74,12 @@
       <li class="breadcrumbs__item"><a class="breadcrumbs__link">Моноподы для селфи</a></li>
     </ul>
     <div class="page-content__wrapper-title">
-      <div class="container">
+      <div class="page-content__inner container">
         <div class="page-content__form-title"><span class="page-content__block-title">Фильтр:</span></div>
         <div class="page-content__sort-title">
-          <ul class="page-content__list page-content__block-title">Сортировка:
-            <li class="page-content__title-item"><a href="" class="page-content__title-link">По цене</a></li>
+          <span class="page-content__block-title">Сортировка:</span>
+          <ul class="page-content__list">
+            <li class="page-content__title-item"><a class="page-content__title-link page-content__title-link--active">По цене</a></li>
             <li class="page-content__title-item"><a href="" class="page-content__title-link">По типу</a></li>
             <li class="page-content__title-item"><a href="" class="page-content__title-link">По популярности</a></li>
           </ul>
@@ -90,7 +91,7 @@
       </div>
     </div>
     <div class="page-content__wrapper-blocks">
-      <div class="container">
+      <div class="page-content__inner container">
         <form action="" class="page-content__form filter">
           <fieldset class="filter__item">
             <legend>Стоимость</legend>
@@ -149,10 +150,10 @@
           <input class="filter__button button" type="submit" value="Показать">
         </form>
         <section class="page-content__content">
-          <ul class="page-content__list">
+          <ul class="page-content__list page-content__list--photos">
             <li class="page-content__item photo">
               <div class="photo__image">
-                <img src="" alt="">
+                <img src="img/item-1.jpg" width="360" height="380" alt="">
               </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
@@ -163,48 +164,49 @@
             </li>
             <li class="page-content__item photo">
               <div class="photo__image">
-                <img src="" alt="">
+                <img src="img/item-2.jpg" width="360" height="380" alt="">
               </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
-                  <h2 class="photo__title">Профессиональная селфи-палка</h2>
+                  <h2 class="photo__title">Профессиональная<br> селфи-палка</h2>
                 </a>
                 <span class="photo__cost">1500 руб.</span>
               </div>
             </li>
             <li class="page-content__item photo">
               <div class="photo__image">
-                <img src="" alt="">
+                <img src="img/item-3.jpg" width="360" height="380" alt="">
               </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
-                  <h2 class="photo__title">Непотоппляемая селфи-палка</h2>
+                  <h2 class="photo__title">Непотопляемая селфи-палка</h2>
                 </a>
                 <span class="photo__cost">2500 руб.</span>
               </div>
             </li>
             <li class="page-content__item photo">
               <div class="photo__image">
-                <img src="" alt="">
+                <img src="img/item-4.jpg" width="360" height="380" alt="">
               </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
-                  <h2 class="photo__title">Селфи-палка "Следуй за мной"</h2>
+                  <h2 class="photo__title">Селфи-палка &laquo;Следуй за мной&raquo;</h2>
                 </a>
                 <span class="photo__cost">4900 руб.</span>
               </div>
             </li>
           </ul>
+          <div class="page-content__paginator paginator">
+            <a href="" class="paginator__prev-link prev-next"><span class="paginator__prev">Назад</span></a>
+            <ul class="paginator__list">
+              <li class="paginator__item"><a href="" class="paginator__link paginator__link--active">1</a></li>
+              <li class="paginator__item"><a href="" class="paginator__link">2</a></li>
+              <li class="paginator__item"><a href="" class="paginator__link">3</a></li>
+            </ul>
+            <a href="" class="paginator__next-link prev-next"><span class="paginator__next">Вперёд</span></a>
+          </div>
         </section>
-        <section class="page-content__paginator paginator">
-          <a href="" class="paginator__prev-link prev-next"><span class="paginator__prev">Назад</span></a>
-          <ul class="paginator__list">
-            <li class="paginator__item"><a href="" class="paginator__link paginator__link--active">1</a></li>
-            <li class="paginator__item"><a href="" class="paginator__link">2</a></li>
-            <li class="paginator__item"><a href="" class="paginator__link">3</a></li>
-          </ul>
-          <a href="" class="paginator__next-link prev-next"><span class="paginator__next">Вперёд</span></a>
-        </section>
+
       </div>
     </div>
 
