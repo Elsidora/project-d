@@ -13,7 +13,19 @@
   height: 565px
   margin-left: -480px
   margin-top: -283px
+
   display: none
+
+  &__inner
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+
+.popup-show-map iframe
+  position: relative
+  z-index: 2
+  border: none
 
 .popup-show-overlay
   position: fixed
@@ -40,6 +52,7 @@
 
 .popup-show-map-open
   display: block
+  background-repeat: no-repeat
   animation: bounce 0.9s
 
 .popup-show-overlay-open
@@ -75,6 +88,7 @@
     border-radius: 50%
 
     cursor: pointer
+    z-index: 3
 
     &::before,
     &::after
