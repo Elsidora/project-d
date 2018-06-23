@@ -1,28 +1,122 @@
 .page-header
   min-height: 226px
+  margin-bottom: 0
   outline: 2px solid red
 
   &__inner
     display: flex
     flex-direction: column
-    background-image: linear-gradient(#ffffff 10%, $header-color 10%)
-    padding: 0 60px
+    background-image: linear-gradient(#ffffff 18%, $header-color 18%)
+    padding: 0 60px 27px
 
   &__logo
     @include logo
-    color: $footer-color
+    color: #000000
+    padding: 16px 0
+    margin-bottom: 2px
+
+    &[href]:hover
+      color: rgba(0, 0, 0, .6)
+
+    &[href]:active
+      color: rgba(0, 0, 0, .3)
+
 
   &__inner-middle
     display: flex
     justify-content: space-between
+    margin-bottom: 20px
+
+
+  &__search
+    width: 500px
+    outline: 2px solid red
+
+  &__form-search
+    @include flex
+
+  &__btn-search
+    font-size: 0
+    border: none
+    width: 85px
+    text-align: center
+    background-color: $header-color
+
+  &__input-search
+    border: none
+    padding-left: 40px
+    width: 414px
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 15px
+    line-height: 30px
+    font-weight: 300
+    color: rgba(0, 0, 0, .3)
+    cursor: pointer
+    background-color: $header-color
+
+    &:hover
+      color: rgba(0, 0, 0, .6)
+
+    &:focus
+      outline: 0
+      color: #000000
+      border-bottom: 1px solid #000000
+      line-height: 26px
+
+    &:focus+.page-header__btn-search
+      border: 1px solid #000000
+      font-family: 'Open Sans', 'Arial', sans-serif
+      font-size: 15px
+      line-height: 26px
+      font-weight: 300
+      color: #000000
+
+    &:focus+.page-header__btn-search:hover
+      border: none
+      background-color: #000000
+      color: $header-color
+
+    &:focus+.page-header__btn-search:active
+      background-color: #000000
+      color: rgba(247, 226, 150, .3)
+
+
+
 
   &__user-menu
     display: flex
     justify-content: space-between
+    width: 500px
 
   &__services
     display: flex
     justify-content: space-between
+    width: 220px
+    outline: 2px solid green
+    &--left
+      width: 280px
+    &--catalog
+      justify-content: flex-start
+
+  &__service
+    padding-left: 25px
+
+  &__link
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 15px
+    line-height: 30px
+    font-weight: 300
+    color: #000000
+
+    &[href]:hover
+      color: rgba(0, 0, 0, .6)
+
+    &[href]:active
+      opacity: 0.3
+
+
+    &--exit
+      color: rgba(0, 0, 0, 0.3)
 
 
 
@@ -30,6 +124,31 @@
   &__inner
     display: flex
     justify-content: space-between
+    padding: 18px 0
+    outline: 2px solid green
+
+  &__catalog
+    position: relative
+    cursor: pointer
+    &:hover .main-nav__sub-menu
+      display: block
+    &::before
+      position: absolute
+      content: ''
+      width: 12px
+      height: 2px
+      left: 230px
+      top: 11px
+      background-color: rgba(0, 0, 0, 0.3)
+    &::after
+      position: absolute
+      content: ''
+      width: 2px
+      height: 12px
+      left: 235px
+      top: 6px
+      background-color: rgba(0, 0, 0, 0.3)
+
 
   &__menu
     display: flex
@@ -38,11 +157,66 @@
   &__list
     display: flex
     justify-content: space-between
+    width: 220px
+    &--left
+      width: 280px
+
+  &__item
+    &--contacts
+      margin-left: auto
+
+  &__link-menu
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 18px
+    line-height: 24px
+    font-weight: 700
+    color: #000000
+    text-transform: uppercase
+    letter-spacing: 4px
+
+    &:hover:not(.main-nav__link-menu--active)
+      color: rgba(0, 0, 0, .6)
+
+    &:active:not(.main-nav__link-menu--active)
+      color: rgba(0, 0, 0, .3)
+
 
   &__sub-menu
+    position: absolute
+    display: none
+
+    top: 25px
+    left: 0
+    border-radius: 5px
+    z-index: 10
+    width: 1160px
+    margin: 0 -60px
+    padding-left: 60px
+    background-color: $header-color
+
+  &__flex
     display: flex
-    justify-content: space-between
+    justify-content: flex-start
+    padding: 28px 0
 
   &__sub-list
     display: flex
     flex-direction: column
+    width: 180px
+    margin-right: 20px
+
+  &__sub-link
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 15px
+    line-height: 36px
+    font-weight: 300
+    color: #000000
+    letter-spacing: normal
+    text-transform: none
+
+    &[href]:hover
+      color: rgba(0, 0, 0, .6)
+
+    &[href]:active
+      color: rgba(0, 0, 0, .3)
+

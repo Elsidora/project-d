@@ -1,0 +1,150 @@
+.popup-show-write
+  top: 40px
+  left: 50%
+  margin-left: -480px
+  width: 960px
+  padding: 90px 100px
+  display: none
+
+.popup-show-map
+  top: 50%
+  left: 50%
+  width: 960px
+  height: 565px
+  margin-left: -480px
+  margin-top: -283px
+  display: none
+
+.popup-show-overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 3
+  background: rgba(0, 0, 0, 0.4)
+
+.popup-show-overlay
+  display: none
+
+@keyframes bounce
+  0% {transform: translateY(-1000px);}
+  50% {transform: translateY(60px);}
+  80% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+
+
+.popup-show-write-open
+  display: block
+  animation: bounce 0.7s
+
+.popup-show-map-open
+  display: block
+  animation: bounce 0.9s
+
+.popup-show-overlay-open
+  display: block
+
+
+@keyframes dance
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+
+.popup-show-write-error
+  animation: dance 0.7s
+
+.popup-show
+  position: fixed
+  color: #000000
+  background-color: #ffffff
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7)
+  z-index: 1000
+
+  &__close
+    position: absolute
+    top: 25px
+    right: 25px
+    width: 50px
+    height: 50px
+
+    font-size: 0
+
+    background-color: $header-color
+    border: 0
+    border-radius: 50%
+
+    cursor: pointer
+
+    &::before,
+    &::after
+      position: absolute
+      content: ''
+      top: 24px
+      left: 13.5px
+      width: 25px
+      height: 2px
+      background-color: #ffffff
+
+    &::before
+      transform: rotate(45deg)
+
+    &::after
+      transform: rotate(-45deg)
+
+    &:hover
+      background-color: $button-color
+
+    &:active
+      opacity: 0.1
+
+
+  &__list
+    @include flex
+    margin-bottom: 25px
+
+  &__item
+    width: 360px
+
+  &__item input,
+  &__area textarea
+    background-color: #f2f2f2
+    border: none
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 14px
+    line-height: 18px
+    color: rgba(0, 0, 0, 0.4)
+    padding: 20px
+
+
+  &__item input
+    width: 360px
+
+  &__item input:hover,
+  &__area textarea:hover
+    background-color: #eaeaea
+
+  &__item input:focus,
+  &__area textarea:focus
+    background-color: #ffffff
+    outline: 0
+    border: 1px solid $button-color
+    color: #000000
+
+
+  &__item label,
+  &__area label
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 18px
+    line-height: 24px
+    font-weight: 700
+
+  &__area
+    margin-bottom: 35px
+
+  &__area textarea
+    width: 760px
+    min-height: 155px
+
+  &__button
+    width: 200px

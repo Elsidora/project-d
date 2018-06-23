@@ -6,9 +6,11 @@
     line-height: 48px
     font-weight: 700
     color: #000000
+    margin-top: 37px
+    margin-bottom: 20px
 
   &__wrapper-title
-    background-image: linear-gradient(to right, #dbdbdb 33%, #ebebeb 33%)
+    background-image: linear-gradient(to right, #dbdbdb 31.5%, #ebebeb 31.5%)
     padding: 23px 0
 
   &__inner
@@ -28,6 +30,11 @@
     line-height: 24px
     font-weight: 700
     color: #000000
+    text-transform: uppercase
+    letter-spacing: 4px
+    &--sort
+      width: 150px
+      outline: 2px solid grey
 
 
   &__sort-title
@@ -37,17 +44,40 @@
     outline: 2px solid orange
 
   &__list
-    @include flex
-
+    display: flex
+    justify-content: flex-start
+    &--sort
+      outline: 2px solid red
+      width: 400px
+      margin-left: -170px
     &--photos
+      justify-content: space-between
       flex-wrap: wrap
       width: 760px
 
+
+
   &__triangles
     @include flex
+    width: 40px
+    outline: 2px solid blue
 
+  &__triangle
+    width: 0
+    height: 0
+    border: 5px solid transparent
+    &--up
+      border-bottom: 10px solid #d3d2d2
+      &:hover
+        border-bottom: 10px solid rgba(0, 0, 0, .6)
+      &:active
+        border-bottom: 10px solid rgba(0, 0, 0, 1)
+
+    &--down
+      border-top: 10px solid #000000
   &__title-item
     font-size: 0
+    padding-left: 30px
     outline: 2px solid black
 
   &__title-link
@@ -62,22 +92,82 @@
     &--active
       color: rgba(0, 0, 0, 1)
 
+    &:hover:not(.page-content__title-link--active)
+      color: rgba(0, 0, 0, .6)
+
+    &:active:not(.page-content__title-link--active)
+      color: rgba(0, 0, 0, 1)
+
   &__wrapper-blocks
-    background-image: linear-gradient(to right, #ebebeb 33%, #ffffff 33%)
+    background-image: linear-gradient(to right, #ebebeb 31.5%, #ffffff 31.5%)
 
   &__content
-    padding: 70px 0
+    padding: 70px 0 73px
 
   &__item
     outline: 2px solid red
-    margin-bottom: 50px
+    margin-bottom: 47px
 
 .breadcrumbs
-  @include flex
+  display: flex
+  justify-content: flex-start
   padding: 0 60px
+  margin-bottom: 43px
+
+  &__item:not(:first-child)
+    padding-left: 40px
+
+  &__link
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 14px
+    line-height: 24px
+    font-weight: 300
+    color: rgba(0, 0, 0, 0.3)
+
+    &[href]:hover
+      color: rgba(0, 0, 0, .6)
+
+    &[href]:active
+      color: rgba(0, 0, 0, .1)
 
 
 .photo
+  position: relative
+  &:hover .photo__hover
+    display: block
+  &__hover
+    display: none
+    position: absolute
+    background-color: rgba(255, 255, 255, 0.5)
+    width: 360px
+    height: 380px
+    left: 0
+    top: 0
+    text-align: center
+    padding: 170px 80px 130px
+  &__basket
+    background-color: transparent
+    width: 200px
+  &__compare
+    border: none
+    background-color: transparent
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 13px
+    line-height: 36px
+    font-weight: 300
+    color: rgba(0, 0, 0, 0.5)
+    cursor: pointer
+
+    &:hover
+      color: rgba(0, 0, 0, 1)
+
+    &:active
+      color: rgba(0, 0, 0, .2)
+
+  &__image
+    width: 360px
+    height: 380px
+    margin-bottom: 32px
   &__inner
     @include flex
     width: 360px
@@ -105,6 +195,48 @@
 
 .paginator
   @include flex
+  background-color: #ebebeb
+  margin-top: -10px
+  margin-bottom: 0
 
   &__list
     @include flex
+    width: 85px
+
+
+  &__link
+    display: block
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 16px
+    line-height: 24px
+    font-weight: 700
+    color: rgba(0, 0, 0, 0.3)
+    padding: 20px 0
+    &--active
+      color: #000000
+
+    &:hover:not(.paginator__link--active)
+      color: rgba(0, 0, 0, .6)
+
+    &:active:not(.paginator__link--active)
+      color: rgba(0, 0, 0, 1)
+
+.prev-next
+  width: 125px
+  padding: 20px 30px
+  font-family: 'Gilroy', 'Arial', sans-serif
+  font-size: 16px
+  line-height: 24px
+  font-weight: 700
+  color: #000000
+  letter-spacing: 4px
+  text-transform: uppercase
+
+  &:hover
+    background-color: #d9d9d9
+
+  &:active
+    background-color: rgba(217, 217, 217, .7)
+    color: rgba(0, 0, 0, .3)
+
+

@@ -3,16 +3,147 @@
   &__inner
     display: flex
     flex-direction: column
+    padding: 60px 0
   &__top,
   &__middle,
   &__bottom
     display: flex
     flex-direction: row
     justify-content: space-between
+    outline: 2px solid white
+
+  &__top
+    margin-bottom: 23px
+
+  &__middle
+    margin-bottom: 36px
 
   &__logo
     @include logo
-    color: $header-color
+    color: $footer-logo
+    width: 360px
+
+    &[href]:hover
+      color: rgba(255, 198, 0, .6)
+
+    &[href]:active
+      color: rgba(255, 198, 0, .3)
+
+  &__services
+    @include flex
+    width: 319px
+
+    &--catalog
+      width: 480px
+
+  &__service-link
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 15px
+    line-height: 36px
+    font-weight: 300
+    color: rgba(255, 255, 255, .7)
+    padding-left: 20px
+
+    &:hover
+      color: rgba(255, 255, 255, 1)
+
+    &:active
+      color: rgba(255, 255, 255, .3)
+
+
+
+    &--exit
+      color: rgba(255, 255, 255, 0.3)
+      margin-left: -35px
+
+  &__contact
+    width: 360px
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 15px
+    line-height: 30px
+    font-weight: 300
+    color: #ffffff
+    outline: 2px solid orange
+    &--right
+      text-align: right
+
+  &__phone
+    font-family: 'Open Sans', 'Arial', sans-serif
+    font-size: 15px
+    line-height: 30px
+    font-weight: 300
+    color: #ffffff
+
+
+  &__list
+    @include flex
+    width: 440px
+    padding: 3px 7px
+    outline: 2px solid green
+
+  &__link
+    font-family: 'Gilroy', 'Arial', sans-serif
+    font-size: 18px
+    line-height: 24px
+    font-weight: 700
+    letter-spacing: 3.4px
+    text-transform: uppercase
+    color: #ffffff
+
+    &:hover
+      color: rgba(255, 255, 255, .6)
+
+    &:active
+      color: rgba(255, 255, 255, .3)
+
+  &__decor
+    position: relative
+    width: 360px
+    &::before
+      position: absolute
+      content: ''
+      left: 0
+      top: 33px
+      width: 80px
+      height: 10px
+      background-color: $footer-logo
+
+  &__inner-logo
+    width: 360px
+    text-align: right
+    padding: 21px 0
+
+  &__logo-academy
+    width: 27px
+    height: 35px
+
+  &__logo-academy svg:hover
+    opacity: 0.6
+
+  &__logo-academy svg:active
+    opacity: 0.3
+
+
+.social
+  width: 160px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 20px 10px
+  &__btn
+    position: relative
+    display: inline-block
+    vertical-align: top
+    font-size: 0
+    width: 34px
+    height: 34px
+    background-color: #7e7e7e
+    border-radius: 50%
+    &:hover
+      background-color: #b5b5b5
+    &:active
+      background-color: #595959
+
 
 
 

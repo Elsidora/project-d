@@ -13,19 +13,20 @@
       <div class="page-header__inner-middle">
         <div class="page-header__search">
           <form action="" method="" class="page-header__form-search">
-            <input class="page-header__input-search" type="text">
+            <input class="page-header__input-search" type="text" placeholder="Поиск по сайту">
+            <button class="page-header__btn-search" type="submit">Найти</button>
           </form>
         </div>
         <div class="page-header__user-menu">
-          <ul class="page-header__services">
-            <li class="page-header__service">
-              <span class="page-header__user-name">Валентин Петухов</span>
+          <ul class="page-header__services page-header__services--left page-header__services--catalog">
+            <li class="page-header__service ">
+              <span class="page-header__user-name page-header__link">Валентин Петухов</span>
             </li>
             <li class="page-header__service">
-              <a href="" class="page-header__link">Выйти</a>
+              <a href="" class="page-header__link page-header__link--exit">Выйти</a>
             </li>
           </ul>
-          <ul class="page-header__services">
+          <ul class="page-header__services page-header__services--right">
             <li class="page-header__service">
               <a href="" class="page-header__link compare">Сравнить</a>
             </li>
@@ -37,29 +38,31 @@
       </div>
       <nav class="main-nav">
         <div class="main-nav__inner">
-          <div class="main-nav__catalog">Каталог товаров
+          <div class="main-nav__catalog main-nav__link-menu">Каталог товаров
             <div class="main-nav__sub-menu">
+              <div class="main-nav__flex">
               <ul class="main-nav__sub-list">
-                <li class="main-nav__sub-item"><a href="">Виртуальная реальность</a></li>
-                <li class="main-nav__sub-item"><a>Моноподы для селфи</a></li>
-                <li class="main-nav__sub-item"><a href="">Экшн-камеры</a></li>
+                <li class="main-nav__sub-item"><a class="main-nav__sub-link" href="">Виртуальная реальность</a></li>
+                <li class="main-nav__sub-item"><a class="main-nav__sub-link">Моноподы для селфи</a></li>
+                <li class="main-nav__sub-item"><a class="main-nav__sub-link" href="">Экшн-камеры</a></li>
               </ul>
               <ul class="main-nav__sub-list">
-                <li class="main-nav__sub-item"><a href="">Фитнес-браслеты</a></li>
-                <li class="main-nav__sub-item"><a href="">Умные часы</a></li>
+                <li class="main-nav__sub-item"><a class="main-nav__sub-link" href="">Фитнес-браслеты</a></li>
+                <li class="main-nav__sub-item"><a class="main-nav__sub-link" href="">Умные часы</a></li>
               </ul>
               <ul class="main-nav__sub-list">
-                <li class="main-nav__sub-item"><a href="">Квадрокоптеры</a></li>
+                <li class="main-nav__sub-item"><a class="main-nav__sub-link" href="">Квадрокоптеры</a></li>
               </ul>
+              </div>
             </div>
           </div>
           <div class="main-nav__menu">
-            <ul class="main-nav__list">
-              <li class="main-nav__item"><a href="">Доставка</a></li>
-              <li class="main-nav__item"><a href="">Гарантия</a></li>
+            <ul class="main-nav__list main-nav__list--left">
+              <li class="main-nav__item"><a class="main-nav__link-menu" href="">Доставка</a></li>
+              <li class="main-nav__item"><a class="main-nav__link-menu" href="">Гарантия</a></li>
             </ul>
             <ul class="main-nav__list">
-              <li class="main-nav__item"><a href="">Контакты</a></li>
+              <li class="main-nav__item main-nav__item--contacts"><a class="main-nav__link-menu " href="">Контакты</a></li>
             </ul>
           </div>
         </div>
@@ -77,15 +80,15 @@
       <div class="page-content__inner container">
         <div class="page-content__form-title"><span class="page-content__block-title">Фильтр:</span></div>
         <div class="page-content__sort-title">
-          <span class="page-content__block-title">Сортировка:</span>
-          <ul class="page-content__list">
+          <span class="page-content__block-title page-content__block-title--sort">Сортировка:</span>
+          <ul class="page-content__list page-content__list--sort">
             <li class="page-content__title-item"><a class="page-content__title-link page-content__title-link--active">По цене</a></li>
             <li class="page-content__title-item"><a href="" class="page-content__title-link">По типу</a></li>
             <li class="page-content__title-item"><a href="" class="page-content__title-link">По популярности</a></li>
           </ul>
           <ul class="page-content__triangles">
             <li class="page-content__triangle page-content__triangle--up"></li>
-            <li class="page-content__triangle page-content__triangle--down"></li>
+            <li class="page-content__triangle page-content__triangle--down page-content__triangle-down--active"></li>
           </ul>
         </div>
       </div>
@@ -155,16 +158,25 @@
               <div class="photo__image">
                 <img src="img/item-1.jpg" width="360" height="380" alt="">
               </div>
+              <div class="photo__hover">
+                <button class="photo__basket button">В корзину</button>
+                <button class="photo__compare">Добавить к сравнению</button>
+              </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
                   <h2 class="photo__title">Любительская селфи-палка</h2>
                 </a>
                 <span class="photo__cost">500 руб.</span>
               </div>
+
             </li>
             <li class="page-content__item photo">
               <div class="photo__image">
                 <img src="img/item-2.jpg" width="360" height="380" alt="">
+              </div>
+              <div class="photo__hover">
+                <button class="photo__basket button">В корзину</button>
+                <button class="photo__compare">Добавить к сравнению</button>
               </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
@@ -177,6 +189,10 @@
               <div class="photo__image">
                 <img src="img/item-3.jpg" width="360" height="380" alt="">
               </div>
+              <div class="photo__hover">
+                <button class="photo__basket button">В корзину</button>
+                <button class="photo__compare">Добавить к сравнению</button>
+              </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
                   <h2 class="photo__title">Непотопляемая селфи-палка</h2>
@@ -187,6 +203,10 @@
             <li class="page-content__item photo">
               <div class="photo__image">
                 <img src="img/item-4.jpg" width="360" height="380" alt="">
+              </div>
+              <div class="photo__hover">
+                <button class="photo__basket button">В корзину</button>
+                <button class="photo__compare">Добавить к сравнению</button>
               </div>
               <div class="photo__inner">
                 <a href="" class="photo__link">
@@ -199,9 +219,9 @@
           <div class="page-content__paginator paginator">
             <a href="" class="paginator__prev-link prev-next"><span class="paginator__prev">Назад</span></a>
             <ul class="paginator__list">
-              <li class="paginator__item"><a href="" class="paginator__link paginator__link--active">1</a></li>
-              <li class="paginator__item"><a href="" class="paginator__link">2</a></li>
-              <li class="paginator__item"><a href="" class="paginator__link">3</a></li>
+              <li class="paginator__item"><a class="paginator__link paginator__link--active">1</a></li>
+              <li class="paginator__item"><a href="#" class="paginator__link">2</a></li>
+              <li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
             </ul>
             <a href="" class="paginator__next-link prev-next"><span class="paginator__next">Вперёд</span></a>
           </div>
@@ -215,29 +235,29 @@
       <div class="page-footer__inner container">
         <div class="page-footer__top">
           <a href="index.html" class="page-footer__logo">device</a>
-          <ul class="page-footer__services">
+          <ul class="page-footer__services page-footer__services--catalog">
             <li class="page-footer__service">
-              <span class="page-footer__user-name">Валентин Петухов</span>
+              <span class="page-footer__user-name page-footer__service-link">Валентин Петухов</span>
             </li>
             <li class="page-footer__service">
-              <a href="" class="page-footer__link">Выйти</a>
+              <a href="" class="page-footer__service-link page-footer__service-link--exit">Выйти</a>
             </li>
             <li class="page-footer__service">
-              <a href="" class="page-footer__link compare">Сравнить</a>
+              <a href="" class="page-footer__service-link compare">Сравнить</a>
             </li>
             <li class="page-footer__service">
-              <a href="" class="page-footer__link basket">Корзина</a>
+              <a href="" class="page-footer__service-link basket">Корзина</a>
             </li>
           </ul>
         </div>
         <div class="page-footer__middle">
           <p class="page-footer__contact">г.Москва, ул.Строителей, 15</p>
           <ul class="page-footer__list">
-            <li class="page-footer__item"><a href="">Доставка</a></li>
-            <li class="page-footer__item"><a href="">Гарантия</a></li>
-            <li class="page-footer__item"><a href="">Контакты</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="">Доставка</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="">Гарантия</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="">Контакты</a></li>
           </ul>
-          <p class="page-footer__contact">Тел:<a href="tel:+74954959595" class="page-footer__phone">+7 (495) 495-95-95</a></p>
+          <p class="page-footer__contact page-footer__contact--right">Тел:<a href="tel:+74954959595" class="page-footer__phone">+7 (495) 495-95-95</a></p>
         </div>
         <div class="page-footer__bottom">
           <div class="page-footer__decor"></div>
@@ -246,9 +266,12 @@
             <a class="social__btn social__btn--inst" href="#">Инстаграм</a>
             <a class="social__btn social__btn--tw" href="#">Twitter</a>
           </div>
-          <a class="page-footer__logo-academy">
-            <img src="" alt="">
-          </a>
+          <div class="page-footer__inner-logo">
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="page-footer__logo-academy">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/></svg>
+
+            </a>
+          </div>
         </div>
       </div>
     </footer>
