@@ -12,7 +12,10 @@
   &__link
     width: 160px
 
+
+
   &__image-wrapper
+    position: relative
     display: flex
     flex-direction: column
     resize: vertical
@@ -27,6 +30,63 @@
     &:active
       background-color: $button-color
       opacity: 0.3
+
+
+  &__item:nth-child(1) .popular__image-wrapper::before
+    position: absolute
+    content: ''
+    width: 97px
+    height: 55px
+    left: calc(50% - 48.5px)
+    top: calc(50% - 27.5px)
+    background-image: url("../img/popular-1.svg")
+
+  &__item:nth-child(2) .popular__image-wrapper::before
+    position: absolute
+    content: ''
+    width: 86px
+    height: 117px
+    left: calc(50% - 43px)
+    bottom: 0
+    background-image: url("../img/popular-2.svg")
+
+  &__item:nth-child(3) .popular__image-wrapper::before
+    position: absolute
+    content: ''
+    width: 71px
+    height: 87px
+    left: calc(50% - 35.5px)
+    top: calc(50% - 43.5px)
+    background-image: url("../img/popular-3.svg")
+
+  &__item:nth-child(4) .popular__image-wrapper::before
+    position: absolute
+    content: ''
+    width: 107px
+    height: 65px
+    left: calc(50% - 53.5px)
+    top: calc(50% - 32.5px)
+    background-image: url("../img/popular-4.svg")
+
+  &__item:nth-child(5) .popular__image-wrapper::before
+    position: absolute
+    content: ''
+    width: 56px
+    height: 98px
+    left: calc(50% - 28px)
+    top: calc(50% - 49px)
+    background-image: url("../img/popular-5.svg")
+
+  &__item:nth-child(6) .popular__image-wrapper::before
+    position: absolute
+    content: ''
+    width: 132px
+    height: 69px
+    left: calc(50% - 66px)
+    top: calc(50% - 34.5px)
+    background-image: url("../img/popular-6.svg")
+
+
 
 
   &__image-wrapper svg
